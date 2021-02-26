@@ -13,7 +13,19 @@ public class ArticlePage extends BasePage{
     @FindBy(id = "firstHeading")
     private WebElement pageTitle;
 
+    @FindBy(id = "ca-talk")
+    private WebElement talkTab;
+
     public String getPageTitle(){
         return pageTitle.getText();
+    }
+
+    public String getTabText(){
+        return talkTab.getText();
+    }
+
+    public TalkPage clickOnTalkTab(){
+        talkTab.click();
+        return new TalkPage(getWebDriver());
     }
 }
