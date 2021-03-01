@@ -1,7 +1,7 @@
 package hellocucumber;
 
 import com.selenium.training.MyDriver;
-import com.selenium.training.pages.WikiHomePage;
+import com.selenium.training.pages.wikipedia.WikiHomePage;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
@@ -22,7 +22,7 @@ public abstract class BaseTest {
 
     @AfterSuite(alwaysRun = true)
     public void afterSuite(){
-        wikiHomePage.dispose();
+        //wikiHomePage.dispose();
     }
 
     public WikiHomePage getWikiHomePage(){

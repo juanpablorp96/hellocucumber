@@ -1,33 +1,29 @@
 package hellocucumber.stepDefinitions;
 
 import com.selenium.training.MyDriver;
-import com.selenium.training.pages.ArticlePage;
-import com.selenium.training.pages.TalkPage;
-import com.selenium.training.pages.WikiHomePage;
+import com.selenium.training.pages.BasePage;
+import com.selenium.training.pages.wikipedia.ArticlePage;
+import com.selenium.training.pages.wikipedia.TalkPage;
+import com.selenium.training.pages.wikipedia.WikiHomePage;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import hellocucumber.BaseTest;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Parameters;
 
 import java.util.List;
 
-public class StepDefinitions {
+public class WikipediaStepDefinitions {
 
     private WikiHomePage wikiHomePage;
     private ArticlePage articlePage;
     private TalkPage talkPage;
 
-    MyDriver myDriver;
 
-    @Given("I'm in the wikipedia home page")
-    public void todayIsSunday() {
-        wikiHomePage = new WikiHomePage(myDriver.getWebDriver());
+    @Given("I am in the wikipedia home page")
+    public void iAmInTheWikipediaHomePage() {
+        wikiHomePage = new WikiHomePage(BaseTest.getMyDriver().getWebDriver());
     }
 
     @Then("I should see the language links")
@@ -60,14 +56,5 @@ public class StepDefinitions {
         Assert.assertEquals(talkPage.getPageTitle(), tabTitle);
     }
 
-    @Before
-    public void beforeSuite(){
-        myDriver = new MyDriver("chrome");
-    }
-
-    @After
-    public void afterSuite(){
-        wikiHomePage.dispose();
-    }
 
 }

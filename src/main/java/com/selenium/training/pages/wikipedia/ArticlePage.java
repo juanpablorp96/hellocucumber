@@ -1,10 +1,11 @@
-package com.selenium.training.pages;
+package com.selenium.training.pages.wikipedia;
 
+import com.selenium.training.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ArticlePage extends BasePage{
+public class ArticlePage extends BasePage {
 
     public ArticlePage(WebDriver webDriver) {
         super(webDriver);

@@ -1,8 +1,9 @@
+@Wikipedia
 Feature: Wikipedia Home Page
   Validation on the Wiki Home Page
 
   Scenario: Check languages
-    Given I'm in the wikipedia home page
+    Given I am in the wikipedia home page
     Then I should see the language links
       | English   |
       | Deutsch   |
@@ -13,7 +14,7 @@ Feature: Wikipedia Home Page
       | Português |
 
   Scenario Outline: Search
-    Given I'm in the wikipedia home page
+    Given I am in the wikipedia home page
     When I search "<text>"
     Then I should see the article title "<expected>"
 
@@ -24,7 +25,7 @@ Feature: Wikipedia Home Page
       | Java | Java     |
 
   Scenario: Check Talk Tab title
-    Given I'm in the wikipedia home page
+    Given I am in the wikipedia home page
     When I search "Java"
     Then I should see the "Talk" tab
     When I click on the Talk tab

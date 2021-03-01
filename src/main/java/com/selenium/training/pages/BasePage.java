@@ -6,8 +6,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class BasePage {
 
-    private WebDriver webDriver;
-    private WebDriverWait webDriverWait;
+    private final WebDriver webDriver;
+    private final WebDriverWait webDriverWait;
 
     public BasePage(WebDriver webDriver) {
         PageFactory.initElements(webDriver, this);
@@ -23,9 +23,4 @@ public abstract class BasePage {
         return webDriverWait;
     }
 
-    public void dispose(){
-        if(webDriver != null){
-            webDriver.quit();
-        }
-    }
 }

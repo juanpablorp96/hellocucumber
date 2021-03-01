@@ -1,5 +1,6 @@
-package com.selenium.training.pages;
+package com.selenium.training.pages.wikipedia;
 
+import com.selenium.training.pages.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class WikiHomePage extends BasePage{
+public class WikiHomePage extends BasePage {
 
     public WikiHomePage(WebDriver webDriver) {
         super(webDriver);
