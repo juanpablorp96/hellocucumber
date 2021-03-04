@@ -1,6 +1,6 @@
 @Endava
-Feature: ESPN Home Page
-  Validation on the ESPN Home Page
+Feature: Endava Home Page
+  Validation on the Endava Home Page
 
   Scenario: Check video controls
     Given I am in the Endava home page
