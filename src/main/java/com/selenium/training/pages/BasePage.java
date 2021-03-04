@@ -16,9 +16,9 @@ public abstract class BasePage {
     public BasePage(WebDriver webDriver) {
         PageFactory.initElements(webDriver, this);
         this.webDriver = webDriver;
-        this.webDriverWait = new WebDriverWait(webDriver, 10);
+        this.webDriverWait = new WebDriverWait(webDriver, 20);
         actionsBuilder = new Actions(getWebDriver());
-
+        this.webDriver.manage().window().maximize();
     }
 
     public WebDriver getWebDriver(){
