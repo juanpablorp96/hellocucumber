@@ -1,16 +1,12 @@
 package hellocucumber.stepDefinitions;
 
-import com.selenium.training.MyDriver;
-import com.selenium.training.pages.BasePage;
 import com.selenium.training.pages.wikipedia.ArticlePage;
 import com.selenium.training.pages.wikipedia.TalkPage;
 import com.selenium.training.pages.wikipedia.WikiHomePage;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
-import cucumber.api.java.en.Then;
-import org.testng.Assert;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 import java.util.List;
 
